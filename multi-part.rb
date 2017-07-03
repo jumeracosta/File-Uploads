@@ -6,9 +6,6 @@ require 'yaml'
 user = YAML.load_file(File.dirname(__FILE__) + "/users_example.yml")
 auth = user[1]["auth_token"]
 
-require 'uri'
-require 'net/http'
-
 url = URI("http://localhost:3000/projects/8/attachments.json?auth_token=SeedT0K3N1")
 
 http = Net::HTTP.new(url.host, url.port)
