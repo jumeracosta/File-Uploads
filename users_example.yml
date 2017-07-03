@@ -1,0 +1,8 @@
+1:
+  email: "johnevil@example.com"
+  auth_token: "SeedT0K3N1"
+  id: 1
+2:
+  email: "janesinister@example.com"
+  auth_token: "SeedT0K3N2"
+  id: 2
