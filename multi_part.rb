@@ -1,3 +1,4 @@
+
 require 'uri'
 require 'net/http'
 require 'yaml'
@@ -6,7 +7,7 @@ files = Dir.glob('*/*').select {|f| File.file? f}
 puts "Processing all.. "
 
 files.each do |fname| #iterate over each file
-	file = File.open(fname)
+ 	file = File.open(fname)
 	byte_representation = file.read
 
 	user = YAML.load_file(File.dirname(__FILE__) + "/users_example.yml") #for authentication
