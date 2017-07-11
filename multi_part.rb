@@ -5,7 +5,7 @@ require 'yaml'
 require 'openssl'
 
 #for authentication
-load_yml = YAML.load_file(File.dirname(__FILE__) + "/initial_data/users_example.yml")
+user = YAML.load_file(File.dirname(__FILE__) + "/users_example.yml")
 auth = user[2]["auth_token"]
 #url = URI("http://localhost:3000/projects/8/attachments.json?auth_token=#{auth}")
 url = URI("https://test.kona.com/projects/8/attachments.json?auth_token=#{auth}")
@@ -13,7 +13,7 @@ url = URI("https://test.kona.com/projects/8/attachments.json?auth_token=#{auth}"
 files = Dir.glob('*/*').select {|f| File.file? f}
 puts "Processing all.. "
 
-execute = YAML.load_file(File.dirname(__FILE__) + "/initial_data/no_execute.yml")
+execute = YAML.load_file(File.dirname(__FILE__) + "/no_execute.yml")
 $i = 1
 $no_execute = execute[1] #given times it will execute
 
