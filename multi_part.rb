@@ -8,7 +8,7 @@ require 'openssl'
 user = YAML.load_file(File.dirname(__FILE__) + "/users_example.yml")
 auth = user[2]["auth_token"]
 #url = URI("http://localhost:3000/projects/8/attachments.json?auth_token=#{auth}")
-url = URI("https://test.kona.com/projects/8/attachments.json?auth_token=#{auth}")
+url = URI("https://alpha.kona.com/projects/137822/attachments.json?auth_token=#{auth}")
 
 files = Dir.glob('*/*').select {|f| File.file? f}
 puts "Processing all.. "
